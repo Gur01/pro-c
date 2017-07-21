@@ -1,0 +1,130 @@
+header
+  width: 100%
+  position: relative
+  overflow: hidden
+  color: #fff
+  font-family: EncyclopaediaPlain
+
+  .header-top
+    width: 100%
+    left: 0
+    right: 0
+    top: 0
+    position: absolute
+    z-index: 2
+    .logo
+      margin-left: 130px
+      margin-top: 30px
+      display: inline-block
+      @media(max-width: 1600px)
+        margin-left: 60px
+      @media(max-width: 1300px)
+        margin-left: 40px
+      @media(max-width: 960px)
+        margin-left: 30px
+      @media(max-width: 768px)
+        margin-top: 0
+      h1
+        +hide-text
+        position: absolute
+        
+      img
+        width: 280px
+        @media(max-width: 1600px)
+          width: 200px
+        @media(max-width: 768px)
+          width: 150px
+
+    nav
+      display: inline-block
+      float: right
+      margin-right: 200px
+      margin-top: 80px
+      @media(max-width: 1600px)
+        margin-right: 100px
+        margin-top: 68px
+        @media(max-width: 1200px)
+          margin-right: 50px
+        @media(max-width: 960px)
+          display: none
+
+      ul
+        li
+          display: inline-block
+          margin-left: em(50px)
+          &:first-child
+            margin-left: 0
+          @media(max-width: 1600px)
+            margin-left: 25px
+          a
+            color: #fff
+            text-transform: uppercase
+            font-size: 18px
+            @media(max-width: 1300px)
+              font-size: 16px
+            @media(max-width: 1050px)
+              font-size: 14px
+    .hamburger-menu
+      display: inline-block
+      right: 90px
+      top: 55px
+      @media(min-width: 961px)
+        display: none
+      @media(max-width: 768px)
+        top: 30px        
+  .header-bottom
+    .slogan
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+      text-align: center
+      z-index: 2
+      .h1-like
+        font-size: rem(36px)
+        @media(max-width: 960px)
+          font-size: rem(30px)
+        @media(max-width: 768px)
+          font-size: rem(26px)
+      h2
+        margin-top: 21px
+        font-size: 14px
+        @media(max-width: 768px)
+          margin: 21px auto 0
+          max-width: 60%
+
+  .header-slider_wrap
+    position: relative
+    width: 100%
+    overflow: hidden
+    z-index: 0
+    .header-slider
+      width: 100%
+      max-height: 750px     
+      .slide
+        width: 100%
+        img
+          width: 100%
+      .ss-paginate
+        position: absolute
+        bottom: 60px
+        z-index: 2
+        a
+          width: 15px
+          height: 15px
+          border-radius: 50%
+          border: 1px solid #fff
+          background-color: transparent
+          @media(max-width: 960px)
+            width: 10px
+            height: 10px
+        .ss-paginate-current
+          background-color: #fff
+      
+    .header-slider_overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      background-color: rgba(0,0,0,0.3)
+      z-index: 1
