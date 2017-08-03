@@ -1,3 +1,62 @@
-/*
- * foter
- */
+footer
+  padding: 100px 0
+  background: url('../img/pattern.png') repeat
+  color: white
+  @media(max-width: 768px)
+    padding: 60px 0
+  .container
+    height: 100%
+    display: table
+    width: 100%
+    @media(max-width: 650px)
+      display: block
+      position: relative
+    
+  .footer-left,
+  .footer-center,
+  .footer-right,
+    width: 33.3%
+    display: table-cell
+    text-align: center
+    vertical-align: middle 
+    height: 100%
+    @media(max-width: 650px)
+      width: 100%
+      display: block
+      margin-bottom: 60px
+      
+
+  .footer-left
+    @media(max-width: 650px)
+      margin-bottom: 0
+    .footer-copyright
+      @media(max-width: 650px)
+        position: absolute
+        bottom: 0
+        margin-bottom: 0
+        display: inline-block
+        left: 50%
+        transform: translateX(-50%)
+        white-space: nowrap
+  .footer-center
+    span.icon-logo_podval
+      font-size: 300px
+      @media(max-width: 768px)
+        font-size: 190px
+
+  .footer-right
+    ul
+      display: inline-block
+      
+      li
+        text-align: left
+        margin-bottom: 6px
+        a
+          color: white
+          font-size: 14px
+          letter-spacing: 2px
+          line-height: 2
+          display: inline-block
+          &:hover
+            color: #ccc
+          

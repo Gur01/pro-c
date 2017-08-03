@@ -1,0 +1,13 @@
+.animated {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
+
+@keyframes showMobileMenu {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

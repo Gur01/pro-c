@@ -1,0 +1,34 @@
+.about-us
+  .about-us_right
+    @media(max-width: 650px)
+      display: none
+    img
+      max-width: 309px
+      width: 58%
+      position: absolute
+      &:first-child
+        top: 7px
+        left: 14%
+      &:last-child
+        top: 140px
+        left: 42%
+
+  .about-us_left
+    width: 53%
+    text-align: center
+    float: left
+    @media(max-width: 650px)
+      float: none
+      width: 100%
+    .about-us_text
+      p
+        margin-bottom: 22px
+        font-size: 16px
+        line-height: 1.5
+        color: $color-p
+    
+  .about-us_right
+    float: right
+    width: 47%
+    position: relative
+    

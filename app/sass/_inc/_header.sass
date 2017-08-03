@@ -1,29 +1,36 @@
 header
   width: 100%
   position: relative
-  overflow: hidden
   color: #fff
-  font-family: EncyclopaediaPlain
-
+  font-family: $ff
+  height: 100%
+  max-height: 750px
+  min-height: 480px
+  @media(max-width: 768px)
+    max-height: 650px
   .header-top
     width: 100%
     left: 0
     right: 0
     top: 0
     position: absolute
-    z-index: 2
+    z-index: 5
+    @media(max-width: 768px)
+      background: url('../img/pattern.png') center top
+      background-size: 170%
     .logo
-      margin-left: 130px
       margin-top: 30px
       display: inline-block
       @media(max-width: 1600px)
         margin-left: 60px
-      @media(max-width: 1300px)
+      @media(max-width: 1350px)
         margin-left: 40px
       @media(max-width: 960px)
         margin-left: 30px
       @media(max-width: 768px)
         margin-top: 0
+      @media(max-width: 500px)
+        margin-left: 15px
       h1
         +hide-text
         position: absolute
@@ -40,38 +47,130 @@ header
       float: right
       margin-right: 200px
       margin-top: 80px
+      position: relative
       @media(max-width: 1600px)
         margin-right: 100px
-        margin-top: 68px
-        @media(max-width: 1200px)
-          margin-right: 50px
-        @media(max-width: 960px)
-          display: none
+        margin-top: 55px
+      @media(max-width: 1350px)
+        margin-right: 50px
+      @media(max-width: 1200px)
+        margin-right: 25px
+      @media(max-width: 960px)
+        display: none
+        width: 90%
+        margin: 0 auto
+        float: none
+        position: absolute
+        margin-left: 5%
+        top: 100%
 
+      @media(max-width: 500px)
+        width: auto
+        left: 15px
+        right: 15px
+        margin-left: 0
       ul
         li
           display: inline-block
-          margin-left: em(50px)
-          &:first-child
-            margin-left: 0
-          @media(max-width: 1600px)
-            margin-left: 25px
+          position: relative
+          @media(max-width: 960px)
+            display: block
+            background-color: #fff
+            border: 1px solid #f3f3f3
+            border-top: 1px solid #dddede
           a
             color: #fff
             text-transform: uppercase
             font-size: 18px
-            @media(max-width: 1300px)
+            background-color: transparent
+            padding: 18px 22px
+            display: inline-block
+            transition: background-color .3s ease
+            @media(max-width: 960px)
+              color: #4e5d71
+              display: block
+              width: 100%
+              padding-left: 33px!important
+              
+              &:hover
+                background-color: #c0cee3!important
+                color: #fff!important
+
+            &.active
+              background-color: #6185ba
+              @media(max-width: 960px)
+                background-color: #c0cee3!important
+
+
+              .icon-down-arrow
+                transform: rotate(-180deg) 
+
+            &:hover
+              background-color: #6185ba
+            @media(max-width: 1350px)
               font-size: 16px
-            @media(max-width: 1050px)
+            @media(max-width: 1200px)
+              padding: 18px 15px
+            @media(max-width: 1100px)
+              padding: 18px 10px
+
+            @media(max-width: 1100px)
               font-size: 14px
+          .icon-down-arrow
+            cursor: pointer
+            transition: transform .3s ease
+            display: inline-block
+            transform-origin: 50% 50%
+            margin-left: 10px
+            font-size: 16px
+              
+          .icon-down-arrow.active
+            transform: rotate(-180deg)          
+          ul
+            position: absolute
+            width: 200%
+            z-index: 2
+            left: 0
+            display: none
+            background-color: #6185ba
+            @media(max-width: 960px)
+              position: relative
+              width: 100%
+            li
+              display: block
+              @media(max-width: 960px)
+                padding-top: 0 !important
+                padding-bottom: 0 !important
+              &:first-child
+                padding-top: 18px
+              &:last-child
+                padding-bottom: 18px
+              
+              a
+                font-size: 14px
+                display: block
+                padding-left: 32px
+                outline: 0
+                padding-top: 10px
+                padding-bottom: 10px
+                @media(max-width: 960px)
+                  font-size: 12px
+                  padding-left: 43px!important
+
+            
     .hamburger-menu
       display: inline-block
       right: 90px
-      top: 55px
+      top: 70px
       @media(min-width: 961px)
         display: none
       @media(max-width: 768px)
-        top: 30px        
+        top: 30px 
+      @media(max-width: 500px)
+        right: 15px
+    .show-mobile-menu
+      animation-name: showMobileMenu
+      display: block
   .header-bottom
     .slogan
       position: absolute
@@ -79,30 +178,40 @@ header
       transform: translateY(-50%)
       width: 100%
       text-align: center
-      z-index: 2
+      z-index: 1
       .h1-like
         font-size: rem(36px)
         @media(max-width: 960px)
           font-size: rem(30px)
         @media(max-width: 768px)
           font-size: rem(26px)
+        @media(max-width: 600px)
+          font-size: rem(24px)
       h2
         margin-top: 21px
         font-size: 14px
         @media(max-width: 768px)
           margin: 21px auto 0
           max-width: 60%
+        @media(max-width: 600px)
+          max-width: 100%
 
   .header-slider_wrap
     position: relative
     width: 100%
+    height: 100%
     overflow: hidden
     z-index: 0
+    .ss-slide-stage,
+    .ss-slide
+      height: 100%
     .header-slider
       width: 100%
-      max-height: 750px     
+      height: 100%
       .slide
         width: 100%
+        height: 100%
+        max-height: 750px  
         img
           width: 100%
       .ss-paginate
@@ -128,3 +237,22 @@ header
       top: 0
       background-color: rgba(0,0,0,0.3)
       z-index: 1
+
+header.header-custom
+  height: auto
+  min-height: 0
+  max-height: none
+  background: none
+  .header-top
+    background: url("../img/pattern.png") repeat
+    position: relative
+    .logo
+      padding-bottom: 60px
+      @media(max-width: 768px)
+        padding-bottom: 0
+  .header-bottom
+    width: 100%
+    height: 200px
+    background: url('../img/1.jpg') center center no-repeat
+    @media(max-width: 768px)
+      height: 75px

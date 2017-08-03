@@ -1,0 +1,105 @@
+.contacts
+  background: url('../img/bg-tube.jpg') center center no-repeat
+  color: #fff
+  background-size: cover
+  padding-bottom: 55px
+  +clearfix
+  .section-header
+    h3
+      color: #fff
+  .contact-info
+    width: 60%
+    float: left
+    @media(max-width: 768px)
+      width: 40%
+    @media(max-width: 650px)
+      float: none
+      width: 100%
+  .contact-form
+    width: 39%
+    float: right
+    @media(max-width: 768px)
+      width: 58%
+    @media(max-width: 650px)
+      float: none
+      width: 100%
+
+  .contact-info,
+  .contact-form
+    h4
+      font-size: 16px
+      text-transform: uppercase
+      margin-bottom: 90px
+      @media(max-width: 650px)
+        text-align: center
+        margin-bottom: 50px
+
+      
+  .contact-info
+    span[class*="icon-"]
+      font-size: 50px
+  .contact-info
+    h4
+      margin-left: 92px  
+      @media(max-width: 768px)
+        margin-left: 0
+    .contacts-adress,
+    .contacts-phone,
+    .contacts-mail
+      display: table
+      margin-bottom: 49px
+      .col
+        display: table-cell
+        vertical-align: middle
+        &:last-child
+          padding-left: 40px    
+    .contacts-adress,
+      p
+        padding-right: 22%
+        @media(max-width: 768px)
+          padding-right: 10%
+ 
+  .contact-form
+    form
+      @media(max-width: 768px)
+        text-align: center
+      
+      input,
+      textarea
+        display: block
+        width: 100%
+        font-family: $ff
+        font-size: $base-fz
+        border: 0
+        background-color: transparent
+        border-bottom: 3px solid #fff
+        margin-bottom: 40px
+        outline: none
+        color:#fff
+        @media(max-width: 650px)
+          font-size: 14px
+        
+      .form-name,
+      .form-mail
+        display: inline-block
+        width: 48%
+      .form-name
+        float: left
+      .form-mail
+        float: right
+
+      textarea
+        width: 100%
+        height: 140px
+      input[type='submit']
+            font-size: 20px
+            text-transform: uppercase
+            padding: 11px 43px
+            background-color: #6185ba
+            color: #fff
+            display: inline-block
+            width: auto
+            border-bottom: 0
+            cursor: pointer
+            margin-top: 20px
+            margin-bottom: 0

@@ -1,34 +1,45 @@
-header
+header.landing-header
   .header-top
-    .logo
-      img(src='../img/svg/logo.svg')
-      h1 Прок профильная компания
-    nav
-      ul
-        li
-          a(href="#") Главная
-        li
-          a(href="#") О нас
-        li
-          a(href="#") Продукция
-        li
-          a(href="#") Партнеры
-        li
-          a(href="#") Документация
-        li
-          a(href="#") Контакты
-    .hamburger-menu#hamburger-menu
-      .bar
+    .container
+      .logo
+        img(src='../img/svg/logo.svg')
+        h1 Прок профильная компания
+      nav#header-nav.animated
+        ul
+          li
+            a(href="#") Главная
+          li
+            a(href="#") О нас
+          li
+            a(href="#") Продукция
+              span.icon-down-arrow
+            ul
+              li
+                a(href="#") ДЛЯ ВИТРАЖЕЙ и КРЫШ
+              li
+                a(href="#") ДЛЯ НЕИЗОЛИРОВАННЫХ КОНСТРУКЦИЙ
+              li
+                a(href="#") ДЛЯ ОКОН И ДВЕРЕЙ
+              li
+                a(href="#") ДЛЯ СИСТЕМ БЕЗОПАСНОСТИ
+              li
+                a(href="#") ЗАЩИТА ОТ ОГНЯ И ДЫМА
+          li
+            a(href="#") Партнеры
+          li
+            a(href="#") Документация
+          li
+            a(href="#") Контакты
+      .hamburger-menu#hamburger-menu
+        .bar
   .header-bottom
     .slogan
-      .h1-like БЕЗОПАСНОСТЬ - НАША ФИЛОСОФИЯ
-      h2 ВЫСОКОПРОЧНЫЕ ПРОФИЛИ ИЗ СТАЛИ ДЛЯ ОКОН, ДВЕРЕЙ И ФАСАДОВ
+      .container
+        .h1-like БЕЗОПАСНОСТЬ - НАША ФИЛОСОФИЯ
+        h2 ВЫСОКОПРОЧНЫЕ ПРОФИЛИ ИЗ СТАЛИ ДЛЯ ОКОН, ДВЕРЕЙ И ФАСАДОВ
   .header-slider_wrap
     #header-slider.header-slider
-      .slide
-          img(src="./img/city.jpg", alt="ffffffff")
-      .slide
-          img(src="./img/domodedovo.jpg", alt="ffff")
-      .slide
-          img(src="./img/garage.jpg", alt="fffffffffff")
+      .slide(style="background: url('./img/slider/city.jpg') center center no-repeat")
+      .slide(style="background: url('./img/slider/city.jpg') center center no-repeat")
+      .slide(style="background: url('./img/slider/city.jpg') center center no-repeat")
     .header-slider_overlay
