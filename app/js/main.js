@@ -52,4 +52,8 @@ $('#brands-slider_id').owlCarousel({
   }
 });
 
+$('#selector_id').click(function(){
+  $(this).toggleClass('active-selector');
+})
+
 });

@@ -33,9 +33,11 @@ ul
 a
   text-decoration: none
   outline: none
+  color: $color-p
 .section-header
   text-align: center
-  h3
+  h3,
+  h2
     font-size: 30px
     color: #4e5d71
     position: relative
@@ -45,6 +47,8 @@ a
     letter-spacing: 1.8px
     padding-left: 47px
     padding-right: 34px
+    font-weight: normal
+    white-space: nowrap
 
     &:before
       width: 100%
@@ -77,4 +81,13 @@ section
     background-color: #6185ba
     color: #fff
     margin-top: 28px
-    display: inline-block      
+    display: inline-block
+.products-item,
+.products-catalog,
+.documentation,
+.header-top,
+.header-custom
+  .container
+    max-width: 1600px
+.ls-active
+  font-weight: bold

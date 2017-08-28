@@ -1,19 +1,244 @@
-.page-content,
-.header-top
-  .container
-    max-width: 1600px
+/* left sidebar */
 .left-sidebar
-  width: 33.3%
+  width: 23%
   display: inline-block
-  border: 1px solid grey
   float: left
+  @media(max-width: 1000px)
+    display: none
+    
+  h3
+    position: relative
+    text-align: left
   .section-header
     text-align: left
   nav.sidebar-nav
+    li
+      margin-top: 16px
     a
       font-size: 12px
       text-transform: uppercase
 
+/* products-catalog */
+.content
+  float: right
+  width: 77%
+  @media(max-width: 1350px)
+    width: 70%
+  @media(max-width: 1000px)
+    float: none
+    width: 100%
+  h2
+    font-size: 20px
+    text-transform: uppercase
+    margin-left: 1.4%
+    color: $color-p
+    margin-bottom: 80px
+    margin-top: 4px
+    @media(max-width: 1000px)
+      margin-left: 0
+    @media(max-width: 650px)
+      margin-bottom: 50px
+    @media(max-width: 500px)
+      text-align: center
+
 .catalog-content
-  width: 66.3%
+  width: 100%
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: flex-start  
+  @media(max-width: 1000px)
+    justify-content: space-between
+
+  .catalog-item
+    width: 30.5%
+    margin: 0 1.4% 40px
+    @media(max-width: 1350px)
+      width: 47%
+    @media(max-width: 1000px)
+      width: 49%
+      margin-left: 0
+      margin-right: 0
+    @media(max-width: 500px)
+      width: 100%
+    img
+      width: 100%
+    .item-description
+      @media(max-width: 500px)
+        text-align: center
+    .item-description_name
+      font-size: 20px
+      text-transform: uppercase
+      margin-top: 26px
+      margin-bottom: 15px
+.item-description_desc,
+.item-content_right
+  font-size: 16px
+  ul
+    @media(max-width: 500px)
+      display: inline-block
+    li:first-letter
+      text-transform: capitalize
+    li
+      margin-bottom: 7px
+      padding-left: 45px
+      position: relative
+      @media(max-width: 500px)
+        text-align: left
+      &:before
+        color: #6185ba
+        content: "\e905"
+        position: absolute
+        left: 0
+        top: -6px
+        font-size: 25px
+        font-family: icomoon
+
+/* products-item */
+.products-item
+  @media(max-width: 768px)
+    padding-top: 40px
+.item-content_left
+  width: 50%
   float: left
+  @media(max-width: 1500px)
+    width: 40%
+  @media(max-width: 768px)
+    width: 100%
+    float: none
+  img
+    width: 100%
+.item-content_right
+  width: 50%
+  float: left
+  padding: 0 0 0 140px
+  color: $color-p
+  @media(max-width: 1500px)
+    width: 60%
+    padding-left: 100px
+  @media(max-width: 1000px)
+    width: 60%
+    padding-left: 60px
+  @media(max-width: 768px)
+    width: 100%
+    padding-left: 0
+    float: none
+  p
+    margin-bottom: 60px
+  h2
+    text-align: center
+    font-size: 30px
+    margin-top: -9px
+    margin-left: 0
+    @media(max-width: 768px)
+      margin-top: 60px
+    @media(max-width: 400px)
+      text-align: left
+      padding-left: 0
+      padding-right: 0
+      display: block
+      
+      &:before,
+      &:after
+        display: none
+
+  .h2-like
+    text-align: left
+    font-size: 30px
+    text-transform: uppercase
+    color: #4e5d71
+    margin-bottom: 40px
+    @media(max-width: 400px)
+      font-size: 25px
+  b
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 35px
+    font-weight: normal
+    display: block
+    
+  ul
+    margin-bottom: 40px
+    li
+      padding-left: 55px
+      margin-bottom: 22px
+      &:before
+        font-size: 30px
+
+.no-sidebar
+  .content
+    width: 100%
+    float: none
+
+/* documentation */
+.documentation
+  .content
+    width: 72%
+    @media(max-width:1500px)
+      width: 63%
+    @media(max-width:1000px)
+      width: 100%
+.documentation-item
+  width: 33%
+  padding: 15px
+  +clearfix
+  display: table
+  float: left
+  @media(max-width:1500px)
+    width: 50%
+  @media(max-width:600px)
+    width: 100%
+  img
+    width: 100%
+    padding: 0 15px 0 0
+  .documentation-description
+    width: 50%
+    display: table-cell
+    vertical-align: middle
+    a
+      text-transform: uppercase
+      font-weight: bold
+
+.selector.active-selector
+  &:before
+    transform: rotate(-180deg) translateY(50%)
+.selector
+  margin-left: 15px
+  width: 60%
+  background-color: #6185ba
+  display: none
+  min-width: 250px
+  position: relative
+  &:before
+    content: "\e902"
+    position: absolute
+    display: inline-block
+    font-size: 15px
+    font-family: icomoon
+    color: #fff
+    top: 50%
+    transform: translateY(-50%)
+    left: 200px
+    transition: transform .3s ease
+    pointer-events: none
+  @media(max-width: 1000px)
+    display: inline-block
+  select
+    background-color: #6185ba
+    border: none
+    font-size: 12px
+    text-transform: uppercase
+    padding: 10px
+    color: #fff
+    appearance: none !important
+    text-indent: 0.01px
+    text-overflow: ''
+    outline: none
+    width: 100%
+    cursor: pointer
+    &:active, 
+    &:focus
+      outline:none
+    option
+      padding: 10px
+      border: 0
