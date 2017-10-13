@@ -20,7 +20,8 @@ gulp.task('js-libs', function(){
 			'./libs/jquery/dist/jquery.js',
 			'./libs/Smoothslides/js/smoothslides-2.2.1.js',
 			'./libs/owl.carousel/dist/owl.carousel.js',
-			'./libs/waypoints/lib/jquery.waypoints.js'
+			'./libs/waypoints/lib/jquery.waypoints.js',
+			'./libs/jquery.pin/jquery.pin.js'
 		])
 		.pipe(concat('libs.js'))
 			//.pipe(uglify())

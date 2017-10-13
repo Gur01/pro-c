@@ -19,6 +19,7 @@
     "bourbon": "^4.3.4",
     "owl.carousel": "^2.2.1",
     "slick-carousel": "^1.6.0",
-    "waypoints": "waypoint#^4.0.1"
+    "waypoints": "waypoint#^4.0.1",
+    "jquery.pin": "^1.0.3"
   }
 }

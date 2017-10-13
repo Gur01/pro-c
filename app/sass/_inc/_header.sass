@@ -18,6 +18,7 @@ header
     @media(max-width: 768px)
       background: url('../img/pattern.png') center top
       background-size: 170%
+      padding: 10px 0
     .logo
       margin-top: 30px
       display: inline-block
@@ -213,6 +214,9 @@ header
         position: absolute
         bottom: 60px
         z-index: 2
+        left: 50%
+        transform: translateX(-50%)
+        display: none
         a
           width: 15px
           height: 15px
@@ -241,6 +245,8 @@ header.header-custom
   .header-top
     background: url("../img/pattern.png") repeat
     position: relative
+    @media(max-width: 768px)
+      padding: 10px 0
     .logo
       padding-bottom: 60px
       @media(max-width: 768px)

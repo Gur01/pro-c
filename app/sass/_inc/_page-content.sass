@@ -167,8 +167,9 @@
     width: 100%
     margin-bottom: 10px
 .item-content_right
+  position: relative
   width: 50%
-  float: left
+  float: right
   padding: 0 0 0 140px
   color: $color-p
   @media(max-width: 1500px)
@@ -181,6 +182,12 @@
     width: 100%
     padding-left: 0
     float: none
+  .pinned
+    @media(max-width: 768px)
+      margin-bottom: 60px
+    div
+      p:last-child
+        margin-bottom: 0
   p
     margin-bottom: 60px
   h2
@@ -300,3 +307,10 @@
     option
       padding: 10px
       border: 0
+.breadcrumb
+  @media(min-width: 768px)
+    margin-bottom: 100px
+  li
+    text-transform: uppercase
+    font-size: 12px
+    display: inline-block

@@ -18,7 +18,7 @@
           <nav class="animated" id="header-nav">
             <ul>
               <li><a href="index.html">Главная</a></li>
-              <li><a href="#">О нас</a></li>
+              <li><a href="#aboutUsId">О нас</a></li>
               <li><a href="products.html">Продукция</a>
                 <ul>
                   <li><a href="#">forster unico</a></li>
@@ -28,9 +28,9 @@
                   <li><a href="#">forster thermfix light</a></li>
                 </ul>
               </li>
-              <li><a href="#">Партнеры</a></li>
+              <li><a href="portfolio.html">Партнеры</a></li>
               <li><a href="#">Документация</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#contactsId">Контакты</a></li>
             </ul>
           </nav>
           <div class="hamburger-menu" id="hamburger-menu">
@@ -48,14 +48,14 @@
       </div>
       <div class="header-slider_wrap">
         <div class="header-slider" id="header-slider">
-          <div class="slide" style="background: url('./img/slider/city.jpg') center center no-repeat;"></div>
-          <div class="slide" style="background: url('./img/slider/city.jpg') center center no-repeat;"></div>
-          <div class="slide" style="background: url('./img/slider/city.jpg') center center no-repeat;"></div>
+          <div class="slide" style="background: url('./img/slider/city.jpg') center center no-repeat; background-size: cover;"></div>
+          <div class="slide" style="background: url('./img/slider/city.jpg') center center no-repeat; background-size: cover;"></div>
+          <div class="slide" style="background: url('./img/slider/city.jpg') center center no-repeat; background-size: cover;"></div>
         </div>
         <div class="header-slider_overlay"></div>
       </div>
     </header>
-    <section class="about-us">
+    <section class="about-us" id="aboutUsId">
       <div class="container">
         <div class="about-us_left">
           <div class="section-header">
@@ -66,35 +66,32 @@
             <p>Не следует, однако забывать, что сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
           </div><a class="btn" href="#">еще о нас</a>
         </div>
-        <div class="about-us_right"><img src="./img/chert.png" alt=""><img src="./img/prof.png" alt=""></div>
+        <div class="about-us_right" id="aboutAnimImg"><img class="animated" src="./img/chert.png" alt=""><img class="animated" src="./img/prof.png" alt=""></div>
       </div>
     </section>
     <section class="production" id="production_id">
       <div class="section-header">
         <h3>Продукция</h3>
       </div>
-      <div class="lines"></div>
+      <div class="lines-wrapper">
+        <div class="lines animated" id="lines"></div>
+      </div>
       <ul>
-        <li style="background-image: url('../img/1.jpg');">
-          <div class="li-overlay"></div>
-          <div class="container"><a href="">ДЛЯ ВИТРАЖЕЙ И ОСТЕКЛЕННЫХ КРЫШ</a></div>
-        </li>
-        <li style="background-image: url('../img/2.jpg');">
-          <div class="li-overlay"></div>
-          <div class="container"><a href="">ДЛЯ НЕИЗОЛИРОВАННЫХ КОНСТРУКЦИЙ</a></div>
-        </li>
-        <li style="background-image: url('../img/3.jpg');">
-          <div class="li-overlay"></div>
-          <div class="container"><a href="">ДЛЯ ОКОН И ДВЕРЕЙ</a></div>
-        </li>
-        <li style="background-image: url('../img/4.jpg');">
-          <div class="li-overlay"></div>
-          <div class="container"><a href="">ДЛЯ СИСТЕМ БЕЗОПАСНОСТИ</a></div>
-        </li>
-        <li style="background-image: url('../img/5.jpg');">
-          <div class="li-overlay"></div>
-          <div class="container"><a href="">ЗАЩИТА ОТ ОГНЯ И ДЫМА</a></div>
-        </li>
+        <li style="background-image: url('../img/1.jpg');"><a href="">
+            <div class="li-overlay"></div>
+            <div class="container"> ДЛЯ ВИТРАЖЕЙ И ОСТЕКЛЕННЫХ КРЫШ</div></a></li>
+        <li style="background-image: url('../img/2.jpg');"><a href=""> 
+            <div class="li-overlay"></div>
+            <div class="container">ДЛЯ НЕИЗОЛИРОВАННЫХ КОНСТРУКЦИЙ</div></a></li>
+        <li style="background-image: url('../img/3.jpg');"><a href=""> 
+            <div class="li-overlay"></div>
+            <div class="container">ДЛЯ ОКОН И ДВЕРЕЙ</div></a></li>
+        <li style="background-image: url('../img/4.jpg');"><a href=""> 
+            <div class="li-overlay"></div>
+            <div class="container">ДЛЯ СИСТЕМ БЕЗОПАСНОСТИ</div></a></li>
+        <li style="background-image: url('../img/5.jpg');"><a href="">
+            <div class="li-overlay"></div>
+            <div class="container">ЗАЩИТА ОТ ОГНЯ И ДЫМА</div></a></li>
       </ul>
     </section>
     <section class="brands">
@@ -109,7 +106,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contactsId">
       <div class="section-header">
         <h3>Контакты</h3>
       </div>
@@ -119,10 +116,10 @@
           <div class="contacts-adress"><span class="col icon-plane"></span>
             <p class="col">119361, г.Москва , ул.Б.Очаковская, д.47А, стр.1, оф.901</p>
           </div>
-          <div class="contacts-phone"><span class="col icon-plane"></span>
+          <div class="contacts-phone"><span class="col icon-smartphone"></span>
             <div class="col"><span>+7 495 287 36 23</span><br><span>+7 915 120 03 83</span></div>
           </div>
-          <div class="contacts-mail"><span class="col icon-plane"></span>
+          <div class="contacts-mail"><span class="col icon-route"></span>
             <p class="col">info@forster-profile.ru</p>
           </div>
         </div>
@@ -166,6 +163,7 @@
         </div>
       </div>
     </footer>
+    <div class="up-arrow animated" id="upArrow"></div>
     <script src="./js/libs.js"></script>
     <script src="./js/main.js"></script>
   </body>

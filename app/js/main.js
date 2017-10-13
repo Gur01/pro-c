@@ -1,19 +1,77 @@
 $(document).ready(function(){
 
 //waypoints
-// var waypoint = new Waypoint({
-//   element: document.getElementById('production_id'),
-//   handler: function(direction) {
-//     console.log(direction);
-//     //notify('Direction: ' + direction)
-//   }
+if($(window).innerWidth()>650) {
+  $('#aboutAnimImg').find('img').css('opacity', 0);
+  var waypoint = new Waypoint({
+    element: document.getElementById('aboutAnimImg'),
+    handler: function() {
+      $('#aboutAnimImg img:first-child').addClass('fadeIn');
+      $('#aboutAnimImg img:last-child').addClass('fadeIn');
+    },
+    offset: '60%'
+  })
+}
+
+// var linesWaypoint = new Waypoint({
+//   element: document.getElementById('lines'),
+//   handler: function() {
+//     $('.lines').addClass('fadeIn');
+//     $('.lines').css('opacity', 1);
+//   },
+//   offset: '80%'
 // })
 
-//Products cards height
+//products paralax
+var lines = $('.lines');
+$(window).on('scroll', function(){
+  paralaxLines();
+});
+$(window).on('scroll');
+paralaxLines();
+function paralaxLines(){
+  var scrollY = $(this).scrollTop();
+  if( $(window).width()>768 ) {
+    $('.lines').css({'transform': 'translateY('+ (0-(scrollY*0.0065)) + '%)'});
+  } else {
+    $('.lines').css({'transform': ''});
+  }
+}
+
+//smooth scroll
+$("body").on('click', '[href*="#"]', function(e){
+  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
+  e.preventDefault();
+});
+
+//up arrow
 $(window).scroll(function(){
+  showUpArrow();
+});
+
+$('#upArrow').click(function(){
+  $('html,body').stop().animate({ scrollTop: 0 }, 800);
+});
+
+function showUpArrow(){
+  if($(window).scrollTop()>500) {
+    $('#upArrow').addClass('bounceIn').removeClass('bounceOut').css('display', '');
+  } else if ($('#upArrow').hasClass('bounceIn')) {
+    $('#upArrow').removeClass('bounceIn').addClass('bounceOut');
+    setTimeout(function(){
+      $('#upArrow').css('display', 'none');
+    }, 500)
+  }
+}
+
+
+//Products cards height
+$(window).resize(function(){
   setCardHeight();
 });
+
 setCardHeight();
+
 function setCardHeight() {
   if($(window).innerWidth()>650) {
     $('.item-description').css('min-height', getCardHeight());
@@ -62,7 +120,7 @@ $('#brands-slider_id').owlCarousel({
   loop: true,
   nav: true,
   dots: false,
-  navText: ["<img src='../img/svg/down-arrow.svg'>","<img src='../img/svg/down-arrow.svg'>"],
+  navText: ["",""],
   responsive: {
     0: {
       items: 1
